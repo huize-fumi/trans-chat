@@ -1,7 +1,8 @@
 class Room < ApplicationRecord
+  validates :title,presence: true
 
-  with_options presence: true do
-    validates :name
-    validates :post
-  end
+  # has_many :messages
+  # has_many :users, through: :room_users
+  # has_many :room_users
+
 end

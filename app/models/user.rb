@@ -13,8 +13,8 @@ class User < ApplicationRecord
     validates :password, format: { with: template }
   end
 
-   has_one :messages
-  # has_one :room_users
-  # has_one :rooms, through :room_users
+   has_many :messages
+  # has_many :room_users
+  # has_many :rooms, through :room_users
 
 end
