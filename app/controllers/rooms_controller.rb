@@ -1,5 +1,9 @@
 class RoomsController < ApplicationController
 
+  def index
+    @rooms = Room.all.order(id:'DESC')
+  end
+
   def new
     @room = Room.new
   end
@@ -16,6 +20,6 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:title, user_id: [])
+    params.require(:room).permit(:title, user_id: []).merge(user_id: current_user.id)
   end
 end

@@ -1,0 +1,21 @@
+<div class="rooms-index">
+  <div class="rooms-index-middle">
+    <h3>チャットルーム一覧</h3>
+  </div>
+  <div class="room-index-lower">
+    <% @rooms.each do |room| %>
+      <div class="room-index-lower_room">
+        <%= link_to messages_path do%>
+          <div class="room-info">
+            <%= room.title %>
+          </div>
+        <%end%>
+          <div class="name-info">
+            <h3>
+              <%# <%= room.id(users.name) %> %>
+            </h3>
+          </div>          
+      </div>
+    <% end %>
+  </div>
+</div>
