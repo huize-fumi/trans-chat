@@ -1,18 +1,20 @@
 <div class="rooms-index">
   <div class="rooms-index-middle">
-    <h3>チャットルーム一覧</h3>
+    <h3>
+      <%= link_to t('application.application.chat_room_list')%>
+    </h3>
   </div>
   <div class="room-index-lower">
     <% @rooms.each do |room| %>
       <div class="room-index-lower_room">
-        <%= link_to messages_path do%>
+        <%= link_to room_messages_path(room) do%>
           <div class="room-info">
             <%= room.title %>
           </div>
         <%end%>
           <div class="name-info">
             <h3>
-              <%# <%= room.id(users.name) %> %>
+              <%# <%= room.id(users.name) %>
             </h3>
           </div>          
       </div>

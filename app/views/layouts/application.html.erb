@@ -8,6 +8,18 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
+    <nav>
+      <ul>
+        <li>
+            <% if I18n.locale.to_s == "en" %>
+              <%= link_to('日本語', :locale => 'ja') %>
+            <% else %>
+              <%= link_to('English', :locale => 'en') %>
+            <% end %>
+        </li>
+      </ul>
+    </nav>
+  
   </head>
 
   <body>
@@ -20,13 +32,13 @@
 
           <% if user_signed_in? %>
             <div class="nav__right">
-               <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: :nav__logout %>
-               <%= link_to "チャットルーム", new_room_path, class: :nav__btn %>
+               <%= link_to t('application.application.log_out'), destroy_user_session_path, method: :delete,class: :nav__logout %>
+               <%= link_to t('application.application.chat_room'),new_room_path, method: :get, class: :nav__btn %>
             </div>
           <% else %>
             <div class="nav__right">
-              <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
-              <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
+              <%= link_to t('application.application.log_in') ,new_user_session_path, class: :nav__btn %>
+              <%= link_to t('application.application.sign_up') , new_user_registration_path, class: :nav__btn %>              
             </div>
           <% end %>
         </div>

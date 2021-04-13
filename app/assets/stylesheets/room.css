@@ -57,6 +57,7 @@ li {
 .chat-room-center_select{
   display:flex;
   justify-content: center;
+  
 }
 
 .chat-room-center_select_post{

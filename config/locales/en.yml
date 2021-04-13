@@ -31,3 +31,52 @@
 
 en:
   hello: "Hello world"
+  application:
+    application:
+      user_registration: "User registration"
+      password: "Password(More than 6 character)"
+      password_confirmation: "Password confirmation"
+      name: "Name"
+      post: "Post"      
+      log_out: "Log out"
+      chat_room: "Chat room making"
+      chat_room_list: "Chat room list"
+      sign_up: "Sign up"
+      log_in: "Log in"
+      Remember_me: "Remember me"
+      email: "Email address"
+      room_name: "Room name"
+      fill_in: "Please fill in a chat room name"
+      select_pst: "Please select a post"
+      select_name: "Please select a name"
+      subject: "Subject"
+      send: "Send"
+      image: "Image"
+      type: "type a message"
+      finish_a_chat: "Finish a chat"
+
+
+ja:
+  application: #applicationコントローラーの
+    application: #applicationのview
+      user_registration: "ユーザー登録"
+      password: "パスワード(6文字以上)"
+      password_confirmation: "パスワード再入力"
+      name: "名前"
+      post: "部署"
+      log_out: "ログアウト"
+      chat_room: "チャットルーム作成"
+      chat_room_list: "チャットルーム一覧"
+      sign_up: "新規登録"
+      log_in: "ログイン"
+      Remember_me: "保存の状態を保持する"
+      email: "メールアドレス"
+      room_name: "ルーム名"
+      fill_in: "チャットルーム名を記入してくださ"
+      select_post: "部署を選んでください"
+      select_name: "名前を選んでください"
+      subject: "件名" 
+      send: "送信"
+      image: "画像"
+      type: "メッセージを入力してください"
+      finish_a_chat: "チャットを終了する"
