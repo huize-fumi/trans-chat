@@ -8,18 +8,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
-    <nav>
-      <ul>
-        <li>
-            <% if I18n.locale.to_s == "en" %>
-              <%= link_to('日本語', :locale => 'ja') %>
-            <% else %>
-              <%= link_to('English', :locale => 'en') %>
-            <% end %>
-        </li>
-      </ul>
-    </nav>
-  
+
   </head>
 
   <body>
@@ -29,18 +18,40 @@
           <div class="nav__left">
             <%= link_to image_tag("logo.jpg", class: :logo), root_path %>
           </div>
-
-          <% if user_signed_in? %>
-            <div class="nav__right">
-               <%= link_to t('application.application.log_out'), destroy_user_session_path, method: :delete,class: :nav__logout %>
-               <%= link_to t('application.application.chat_room'),new_room_path, method: :get, class: :nav__btn %>
-            </div>
-          <% else %>
-            <div class="nav__right">
-              <%= link_to t('application.application.log_in') ,new_user_session_path, class: :nav__btn %>
-              <%= link_to t('application.application.sign_up') , new_user_registration_path, class: :nav__btn %>              
-            </div>
-          <% end %>
+          <div class="nav_center">
+            <nav>
+              <ul>
+                <li>
+                  <div class="nav_center_top">
+                    <div class="nav_center_ja">
+                      <div class="nav_image" >
+                        <%= link_to('日本語',{:locale => 'ja'} ,{class: 'nav_letter'}) %>
+                      </div>
+                    </div>
+                    <div class="nav_center_en">
+                      <div class="nav_image" >
+                        <%= link_to('English',{:locale => 'en'} ,{class: 'nav_letter'}) %>
+                      </div>
+                    </div>
+                    <div class="nav_center_ch">
+                      <div class="nav_image" >
+                        <%= link_to('中国語',{:locale => 'zh_CN'} ,{class: 'nav_letter'}) %>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="nav_right">
+            <% if user_signed_in? %>
+                <%= link_to t('application.application.log_out'), destroy_user_session_path, method: :delete,class: :nav__logout %>
+                <%= link_to t('application.application.chat_room'),new_room_path, method: :get, class: :nav__btn %>
+            <% else %>
+                <%= link_to t('application.application.log_in') ,new_user_session_path, class: :nav__btn %>
+                <%= link_to t('application.application.sign_up') , new_user_registration_path, class: :nav__btn %>              
+            <% end %>
+          </div>
         </div>
       </div>
     </header>

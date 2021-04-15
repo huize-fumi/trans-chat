@@ -54,6 +54,60 @@ a {
 .logo {
   width: 100px;
 }
+
+.nav_center{
+  display:center;
+  flex-direction: column;
+}
+
+.nav_center_top{
+  width:250px;
+  height:70px;
+  display:flex;
+}
+
+.nav_center_ja{
+  width:70px;
+  height:50px;
+  background-image: url(japan.png);
+  background-size: cover;
+}
+
+.nav_center_en{
+  width:70px;
+  height:50px;
+  background-image: url(english.png);
+  background-size: cover;
+  margin:0 20px;
+}
+
+.nav_center_ch{
+  width:70px;
+  height:50px;
+  background-image: url(chinese.png);
+  background-size: cover;
+}
+
+.nav_image{
+  width:30px;
+  height:30px;
+  position:relative;
+  display: flex;
+}
+
+.nav_letter{
+  width:70px;
+  height:70px;
+  /* border:2px solid blue; */
+  position:absolute;
+  text-align: center;
+  padding-top:45px;
+}
+
+.nav_right{
+  width:300px;
+}
+
 .nav__btn{
   display: inline-block;
   padding: 0.4em 1.6em;

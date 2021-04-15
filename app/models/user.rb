@@ -7,10 +7,11 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :post
-    validates :email, uniqueness: true
+    validates :email
+    # , uniqueness: true
 
-    template = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
-    validates :password, format: { with: template }
+    # template = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
+    # validates :password, format: { with: template }
   end
 
   has_many :messages

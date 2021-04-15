@@ -34,11 +34,10 @@
             </select>
             <select name="room[user_ids][]">
               <option value=""><%=link_to t('application.application.select_name')%></option>
-              <% User.where.not(id: current_user.id).each do |user| %>%
+              <% User.where.not(id: current_user.id).each do |user| %>
                 <option value=<%= user.id %>><%= user.name %></option>
               <% end %>
             </select>
-            <input name="room[user_ids][]" type="hidden" value=<%= current_user.id%>>
 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script type="text/javascript">
@@ -53,6 +52,7 @@
               });
             </script>
           </div>
+          <input name="room[user_ids][]" type="hidden" value=<%= current_user.id%>>
         </div>
       </div>
       <div class = 'chat-room_action_btn_form'>

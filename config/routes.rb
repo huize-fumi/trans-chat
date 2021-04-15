@@ -5,11 +5,10 @@ Rails.application.routes.draw do
   scope "(:locale)" do
 
     scope module: :users do
-
       resources :users, only: [:edit, :update]
     end
 
-    resources :rooms, only:[:new,:create,:index] do
+    resources :rooms, only:[:new,:create,:index,:destroy] do
       resources :messages, only:[:create,:index]
     end
   end

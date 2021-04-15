@@ -7,10 +7,11 @@
 <div class="side_bar_down">
   <div class="chat-room">
     <%# <% current_user.rooms.each do |room| %>
-      <div class="chat-room_name">
-        <%= @room.users.name%>
-        <%# <%= @room.users.email %>
-      </div>
+      <% @room.users.each do |user| %>
+        <div class="chat-room_name">
+          <%= user.name %>
+        </div>
+      <% end %>
     <%# <%end%>
   </div>
 </div> 
