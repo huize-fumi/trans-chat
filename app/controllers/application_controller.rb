@@ -18,5 +18,5 @@ class ApplicationController < ActionController::Base
   def default_url_options(options = {}) #デフォルト値として現在の言語を指定
      { :locale => I18n.locale }.merge options
   end
-  
+
 end

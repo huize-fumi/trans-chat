@@ -6,14 +6,11 @@
     </div>
   </div>
   <div class="main_bar_top_right">
-    <div class="chat-btn">
-      <%= link_to t('application.application.finish_a_chat'), room_path(@room) ,method: :delete %>
+    <div class="chat-btn-form">
+      <%= link_to t('application.application.back_to_the_list'), rooms_path,class:"chat-btn" %>
+      <%= link_to t('application.application.finish_a_chat'), room_path(@room) ,method: :delete, class:"chat-btn" %>
     </div>
   </div>
-</div>
-
-<div class="main_bar_middle">
-    <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
@@ -26,3 +23,7 @@
   </div>
   <%= f.submit "#{t('application.application.send')}", class: 'form-submit' %>
 <% end %>
+
+<div class="main_bar_middle">
+    <%= render partial: 'message', collection: @messages %>
+</div>

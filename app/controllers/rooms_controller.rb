@@ -1,6 +1,7 @@
 class RoomsController < ApplicationController
 
   def index
+    # @room = Room.find(params[:room_id])
     @rooms = Room.all.order(id:'DESC')
   end
 

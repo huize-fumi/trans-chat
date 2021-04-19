@@ -30,7 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  # hello: "Hello world"
   application:
     application:
       user_registration: "User registration"
@@ -54,6 +54,11 @@ en:
       image: "Image"
       type: "type a message"
       finish_a_chat: "Finish a chat"
+      create: "Create"
+      back_to_the_list: "Back to the list"
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
 
 
 ja:
@@ -80,6 +85,8 @@ ja:
       image: "画像"
       type: "メッセージを入力してください"
       finish_a_chat: "チャットを終了する"
+      create: "作成する"
+      back_to_the_list: "一覧へ戻る"
 
 zh_CN:
   application: #applicationコントローラーの
@@ -105,3 +112,5 @@ zh_CN:
       image: "图片"
       type: "请输入留言"
       finish_a_chat: "结束闲聊"
+      create: "创造"
+      back_to_the_list: "回到清单"
