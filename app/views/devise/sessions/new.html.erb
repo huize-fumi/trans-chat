@@ -3,11 +3,12 @@
     <%= link_to t('application.application.log_in')%>
   </div>
   <%= form_with model: @user ,url:user_session_path, local: true  do |f| %>
+  <%  render 'devise/shared/error_messages', model: f.object %>
     <div class="regi-form">
       <div class="regi-form-left">
         <div class="regi-form-left_content">
           <%= link_to t('application.application.email') %><br/><br/>
-          <%= link_to t('application.application.log_in')%><br/><br/>
+          <%= link_to t('application.application.password')%><br/><br/>
         </div>
       </div>
       <div class="regi-form-right">

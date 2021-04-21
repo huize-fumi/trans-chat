@@ -15,7 +15,8 @@
     <div class="message">
       <div class="message-content">
         <!-- 投稿したメッセージ内容を記述する -->
-        <%= message.content %>
+        <%= message.content %><br />
+        <%= message.comment %>
       </div>
       <%= image_tag message.image.variant(resize: '200x200'), class: 'message-image' if message.image.attached? %>
     </div>

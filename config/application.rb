@@ -13,6 +13,8 @@ module TransChat
     # config.i18n.default_locale = :ja
     config.time_zone = 'Asia/Tokyo'
 
+    # config.action_view.field_error_proc = Proc.new { |html_tag, instance| html_tag }
+
 
     config.generators do |g|
       g.stylesheets false
