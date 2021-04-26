@@ -3,6 +3,9 @@
     <h1><%= link_to t('application.application.chat_room')%></h1>
     <div class='chat-room-back'>
     <%= form_with model: @room, local: true do |f| %>
+    
+      <%= render 'devise/shared/error_messages', model: f.object %> 
+
       <div class='chat-room-form_field'>
         <div class='chat-room-label_field'>
           <%= link_to t('application.application.room_name') %>

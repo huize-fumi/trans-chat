@@ -56,6 +56,8 @@ en:
       finish_a_chat: "Finish a chat"
       create: "Create"
       back_to_the_list: "Back to the list"
+      translation: "Translation"
+      registration: "Registration"
   time:
     formats:
       default: "%Y/%m/%d %H:%M:%S"
@@ -87,6 +89,8 @@ ja:
       finish_a_chat: "チャットを終了する"
       create: "作成する"
       back_to_the_list: "一覧へ戻る"
+      translation: "翻訳"
+      registration: "登録"      
 
 zh_CN:
   application: #applicationコントローラーの
@@ -114,3 +118,5 @@ zh_CN:
       finish_a_chat: "结束闲聊"
       create: "创造"
       back_to_the_list: "回到清单"
+      translation: "翻译"
+      registration: "登录"

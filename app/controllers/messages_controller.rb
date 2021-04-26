@@ -35,8 +35,16 @@ class MessagesController < ApplicationController
     client = Aws::Translate::Client.new(region: 'us-west-2')
     @room = Room.find(params[:room_id])
     @message = @room.messages.create(message_params)
-    result = client.translate_text(text: @message.content, source_language_code: "ja", target_language_code: "en")
 
+    if params[:language_id] == "1"
+      result = client.translate_text(text: @message.content, source_language_code: "auto", target_language_code: "ja")
+    elsif params[:language_id] == "2"
+      result = client.translate_text(text: @message.content, source_language_code: "auto", target_language_code: "en")
+    elsif params[:language_id] == "3"
+      result = client.translate_text(text: @message.content, source_language_code: "auto", target_language_code: "zh")
+    else params[:language] == "0"
+      return
+    end
     @message.comment = result.translated_text
   end
 end

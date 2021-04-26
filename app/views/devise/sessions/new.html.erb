@@ -2,7 +2,7 @@
   <div class="devise-form">
     <%= link_to t('application.application.log_in')%>
   </div>
-  <%= form_with model: @user ,url:user_session_path, local: true  do |f| %>
+  <%= form_with model: @user ,url: new_user_session_path, local: true  do |f| %>
   <%  render 'devise/shared/error_messages', model: f.object %>
     <div class="regi-form">
       <div class="regi-form-left">

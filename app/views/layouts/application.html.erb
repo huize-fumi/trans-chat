@@ -54,7 +54,7 @@
                       <%= link_to t('application.application.chat_room'),new_room_path, method: :get, class: :nav__btn %>
                       <div class=nav_right_current_user>
                         <%= t('application.application.log_in')%><%= "："%>
-                        <%= link_to current_user.name, edit_user_path(current_user),class:'nav_right_user' %>
+                        <%= link_to current_user.name, class:'nav_right_user' %>
                       </div>                  
                   <% else %>
                       <%= link_to t('application.application.log_in') ,new_user_session_path, class: :nav__btn %>
