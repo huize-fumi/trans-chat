@@ -7,14 +7,15 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :post
-    validates :email, uniqueness: true
+    validates :email, uniqueness: true, length: { minimum: 6 }
 
-    template = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
-    validates :password, format: { with: template }
+    # template = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
+    # validates :password, format: { with: template }
+
   end
 
-  # has_one :messages
-  # has_one :room_users
-  # has_one :rooms, through :room_users
+  has_many :messages
+  has_many :room_users
+  has_many :rooms, through: :room_users
 
 end
